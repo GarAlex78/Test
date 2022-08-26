@@ -52,271 +52,71 @@
 //   }
 // }
 // console.log(`posle ${longesWorld}`);
-
-//-----------------function-----------------------------------
-// const add = function (a,b) {
-//     console.log(`a: ${a}, b: ${b}`)
-//     const summ = a + b;
-//     console.log(`summ: ${summ}`)
+//========================task 1===========================================
+// Напиши функцию logItems(array), которая получает массив и использует цикл for, который для каждого элемента массива будет выводить в консоль сообщение в формате [номер элемента] - [значение элемента].
+// Нумерация должна начинаться с 1. К примеру для первого элемента массива ['Mango', 'Poly', 'Ajax'] с индексом 0 будет выведено '1 - Mango', а для индекса 2 выведет '3 - Ajax'.
+// const logItems = function(array) {
+//   // твой код
 // };
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
 
-// add(2,3);
+// logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+// ------------------------solution task 1--------------------------------------------------
 
-
-//console.log(4<=4); // 8
-// console.log(message.indexOf("hello")); // -1
-
-// function formatMessage(message, maxLength) {
-//     let result;
-//     // Change code below this line
-//   const messageLigth = message.length;
-//   console.log(messageLigth)
-//     if (messageLigth<=maxLength){
-//         console.log('if')
-//       result = message;
-//     }else {
-//         console.log('else')
-//       result = message.slice(0,maxLength) + "...";
+// const logItems = function(array){
+//     for (let i = 0; i <array.length; i+=1){
+//         console.log(`${i+1} - ${array[i]}`)
 //     }
-//     /// Change code above this line
-//     return result;
-//   }
-// function checkForSpam(message) {
-//     let result;
-//     // Change code below this line
-//   const messageToLowerCase = message.toLowerCase();
-//     result = messageToLowerCase.includes('spam') || messageToLowerCase.includes('sale');// Change code above this line
-//     return result;
-//   }
-//  console.log(checkForSpam("Excepteur adipisicing non consectetur incididunt aliqua et  labosalris mollit incididunt mollit Lorem deserunt pariatur incididunt.")) ;
 
-// function checkStorage(available, ordered) {
-//     // Change code below this line
-   
-  
-//     if (ordered === 0) {
-//       return "Your order is empty!";
-//     } else if (ordered > available) {
-//       return "Your order is too large, not enough goods in stock!";
-//     } 
-//       return "The order is accepted, our manager will contact you";
-    
-  
-  
-//     // Change code above this line
-//   }
-  
-// console.log( checkStorage(100, 101))
-// const g = 56;
-// function foor () {
-//     const l = 2;
-//     for(let i=1 ; i<10; i+=1){
-//         const d = 30;
-//         if (i ===5){
-//             const f = 22;
-//             console.log('l: ',l);
-//             console.log('d: ',d);
-//             console.log('f: ',f);
-//             console.log('g: ',g);
-//         }
-//     }
-// } 
-// foor();
-//const fruits = ["apple", "plum", "pear", "orange"];
-
-// Change code below this line
-
-// const firstElement = fruits[0];
-// const secondElement = fruits[1];
-// const lastElement = fruits[fruits.length-1];
-// console.log(lastElement)
-//console.log(fruits[fruits.length - 1])
-
-//function getExtremeElements(array) {
-    // Change code below this line
-//   const firstElementAr = array[0];
-//   const lastElementAr  = array[array.length - 1];
-//   const newAr = array.slice(0,array.length);
-//     return newAr;
-    // Change code above this line
- // }
-//   getExtremeElements([1,2,3,3,4,5]);
-  //console.log(getExtremeElements([1,2,3,3,4,5,6]))
-
-  //function getExtremeElements(array) {
-    // Change code below this line
-//   const firstElementAr = array[0];
-//   const lastElementAr  = array[array.length - 1];
-//   const newAr = [firstElementAr,lastElementAr];
-//     return newAr;
-    // Change code above this line
-  //}
-//   function calculateEngravingPrice(message, pricePerWord) {
-//     // Change code below this line
-//  const words = message.split(' ');
-//  console.log(words)
-//  const countWordOfWords = words.length;
-//  console.log(countWordOfWords)
-//     return countWordOfWords*pricePerWord;
- 
- 
-//     // Change code above this line
-//  }
-//  console.log(calculateEngravingPrice("Web-development is creative work", 40));
-// function slugify(title) {
-//     // Change code below this line
-//   const titleInArrLowerCase = title.toLowerCase().split(' ');
-//   console.log(titleInArrLowerCase)
-//   const slag = titleInArrLowerCase.join('-');
-//   return slag;
-//     // Change code above this line
-//   }
-// console.log(slugify("Arrays for begginers"))
-
-// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
-
-// // Change code below this line
-// const firstTwoEls = fruits.slice(0,2);
-// const nonExtremeEls = fruits.slice(1,fruits.length-1) ;
-// const lastThreeEls = fruits.slice(-3);
-
-// console.log("firstTwoEls: ", firstTwoEls);
-// console.log("nonExtremeEls: ", nonExtremeEls)
-// console.log("lastThreeEls: ", lastThreeEls)
-
-//-------------------------------------------------------------
-// Напиши функцію makeArray(firstArray, secondArray, maxLength) для створення нового масиву з усіма елементами двох вихідних firstArray і secondArray. Параметр maxLength містить максимально допустиму довжину нового масиву.
-
-// Якщо кількість елементів нового масиву більша за maxLength, функція повинна повернути копію масиву довжиною maxLength елементів. В іншому випадку функція повинна повернути новий масив повністю.
-
-
-// function makeArray(firstArray, secondArray, maxLength) {
-//     const jointArray = firstArray.concat(secondArray);
-//     const jointArrayLength = jointArray.length;
-   
-// if (jointArrayLength > maxLength){
-   
-//     return jointArray.slice(0,maxLength)
 // }
-//     return jointArray
-// }
+// const res = logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong'])
 
-// console.log(makeArray(["Earth", "Jupiter",], ["Neptune", "Uranus", "Venus"], 0 ))
+//================================task 2==========================================
 
-// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// Напиши скрипт подсчета стоимости гравировки украшений. Для этого создай функцию calculateEngravingPrice(message, pricePerWord) принимающую строку (в строке будут только слова и пробелы) и цену гравировки одного слова, и возвращающую цену гравировки всех слов в строке.
 
-// for (let i = 0; i<fruits.length; i +=1 ) { // Change this line
-//   const fruit = fruits[i]; // Change this line
-//   console.log(fruit);
-// }
+//_______________________________solution task 2_______________________________________
 
+//  const calculateEngravingPrice = function (message, pricePerWord = 2){
+//     const messageToArray = message.split(' ');
+//     return messageToArray.length * pricePerWord
+ //  }
+//  const a = calculateEngravingPrice('Proin sociis natoque et magnis parturient montes mus', 5)
+//  console.log(a)
 
-// function calculateTotalPrice(order) {
-//     let total = 0;
-//     // Change code below this line
-//   for (let i = 0; i < order.length; i += 1){
-//     total += order[i];
-//   }
-//     // Change code above this line
-//     return total;
-//   }
-//  console.log( calculateTotalPrice([164, 48, 291]))
+//================================task 4==========================================
+// Напиши функцию formatString(string) которая принимает строку и форматирует ее если необходимо.
+// Если длина строки не превышает 40 символов, функция возвращает ее в исходном виде.
+// Если длина больше 40 символов, то функция обрезает строку до 40-ка символов и добавляет в конец строки троеточие '...', после чего возвращает укороченную версию.
 
-// function findLongestWord(string = "lazzy dog") {
+//_______________________________solution task 4_______________________________________
 
-//   const stringArray = string.split(" ");
-//     let longestWord = stringArray[0];
-//     for (const item of stringArray){
-//       if (longestWord.length < item.length){
-//         longestWord =  item ;
-//       }
-//        }
-//       return longestWord;
-//    }
-//    findLongestWord()
+ // пример функции, которая использует несколько return
+ function calculateArea(side1, side2, side3) {
+    // если нет значения для аргумента side1 или side2 - не выполняем расчетов, возвращаем undefined
+    if (side1 === undefined || side2 === undefined) {
+        return; // прекратить работу функции - возвращается результат undefined
+    }
 
-// function createArrayOfNumbers(min, max) {
-//     const numbers = [];
-//     // Change code below this line
-//   for (let i = min; i<=max; i+=1){
-//     if (Number.isInteger(i)){
-//       numbers.push(i)
-//     }
-//   }
-//     // Change code above this line
-//     return numbers;
-//   }
-//   console.log(createArrayOfNumbers(14,17))
+    // если не указана сторона 3, но есть сторона 1 и 2 - считаем площадь квадрата
+    if (side3 === undefined) {
+        return side1 * side2;
+    }
+    else {
+        // если указано три стороны - считаем площадь треугольника по формуле Герона
+        let p = (side1 + side2 + side3) / 2; // полупериметр треугольника 
+        return Math.sqrt(p * (p - side1) * (p - side2) * (p - side3)); // корень произведений разности полупериметра и каждой стороны
+    }
+}
 
-//   function createArrayOfNumbers(numbers, value) {
-//     const newNumbers = [];
+let result = calculateArea(10, 10);
+console.log("Площадь квадрата " + result);
 
-//   for (let item of numbers){
-//     if (item>value){
-//         newNumbers.push(item)
-//     }
-//   }
-//        return newNumbers;
-//   }
-//   console.log(createArrayOfNumbers([12, 24, 8, 41, 76], 38))
+result = calculateArea(10, 10, 15);
+console.log("Площадь треугольника " + result);
 
-
-// function getCommonElements(array1, array2) {
-//     // Change code below this line
-//   const newArray =[];
-//     for (let itemArray1 of array1){
-//       if(array2.includes(itemArray1)){
-//         newArray.push(itemArray1);
-//       }
-//     }
-//   return newArray;
-  
-//    // Change code above this line
-//   }
-//   console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]))
-
-
-// function getEvenNumbers(start, end) {
-//     // Change code below this line
-//  const evenNumbers = [];
-//    for (let i = start; i<=end; i+=1){
-     
-//      if (i % 2 === 0){
-//        evenNumbers.push(i)
-//      }
-//    }
- 
-//  return evenNumbers;
-//      // Change code above this line
-//    }
-//    console.log(getEvenNumbers())
-
-
-// function includes(array, value) {
-//     // Change code below this line
-//   let isInclud = false;
-//     for (let item of array){
-//     //   if (item === value){ 
-//     //     return }
-//     console.log(item)
-//       if (item === value){
-//         isInclud = true;} 
-//     }
-//     return isInclud
-//     // Change code above this line
-//   }
-  
-//   console.log(includes([1, 2, 3, 4, 5], 3))
-
-
-function calculateTotal(number) {
-    // Change code below this line
-   let total =0;
-     for (let i = 1; i <= number; i +=1) {
-       total += i;
-     }
-   return total;
-   
-     // Change code above this line
-   }
-   console.log(calculateTotal(7))
+result = calculateArea(10);
+console.log("Площадь фигуры " + result);
